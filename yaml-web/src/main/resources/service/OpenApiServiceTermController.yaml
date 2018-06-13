@@ -1,0 +1,86 @@
+swagger: "2.0"
+info:
+  title: JCLOUD Renewal API
+  description: API related to Renewal
+basePath: /renewal
+paths:
+  "/postQuery/{serviceCode}":
+    post:
+      operationId: postQuery
+      parameters:
+        - name: filters
+          in: query
+          type: array
+          items:
+            $ref: "../../common/model/Filter.yaml#/definitions/filter"
+        - name: pageNumber
+          in: query
+          type: integer
+          required: false
+        - name: pageSize
+          in: query
+          type: integer
+          required: true
+        - name: serviceTerm
+          in: body
+          schema:
+            $ref: "../model/ServiceTerm.yaml#/definitions/serviceTerm"
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                $ref: "../model/rviceTerm.yaml#/definitions/rviceTerm"
+              requestId:
+                type: string
+        404:
+          description: NOT_FOUND
+  "/queryServiceTerm/{serviceCode}":
+    get:
+      operationId: queryServiceTerm
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                $ref: "../model/rviceTerm.yaml#/definitions/rviceTerm"
+              requestId:
+                type: string
+        404:
+          description: NOT_FOUND
+  "/query/{serviceCode}:delete":
+    get:
+      operationId: querydelete
+      parameters:
+        - name: filters
+          in: query
+          type: array
+          items:
+            $ref: "../../common/model/Filter.yaml#/definitions/filter"
+        - name: pageNumber
+          in: query
+          type: integer
+          required: false
+        - name: pageSize
+          in: query
+          type: integer
+          required: true
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                $ref: "../model/rviceTerm.yaml#/definitions/rviceTerm"
+              requestId:
+                type: string
+        404:
+          description: NOT_FOUND
+parameters:
+  serviceCode:
+    name: serviceCode
+    in: path
+    required: true
+    type: string

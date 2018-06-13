@@ -1,0 +1,7 @@
+swagger: "2.0"
+definitions:
+  serviceTermResult:
+    x-jcloud-module: renewal
+    title: ServiceTermResult
+    type: object
+    properties:
