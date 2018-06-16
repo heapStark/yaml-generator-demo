@@ -1,6 +1,6 @@
 swagger: "2.0"
 info:
-  title: JCLOUD Renewal API
+  title: JCLOUD test API
   description: API related to Renewal
 basePath: /renewal
 paths:
@@ -31,7 +31,7 @@ paths:
           schema:
             properties:
               result:
-                $ref: "../model/rviceTerm.yaml#/definitions/rviceTerm"
+                $ref: "../model/serviceTermResult.yaml#/definitions/ServiceTermResult"
               requestId:
                 type: string
         404:
@@ -45,7 +45,7 @@ paths:
           schema:
             properties:
               result:
-                $ref: "../model/rviceTerm.yaml#/definitions/rviceTerm"
+                $ref: "../model/serviceTermResult.yaml#/definitions/ServiceTermResult"
               requestId:
                 type: string
         404:
@@ -73,7 +73,7 @@ paths:
           schema:
             properties:
               result:
-                $ref: "../model/rviceTerm.yaml#/definitions/rviceTerm"
+                $ref: "../model/serviceTermResult.yaml#/definitions/ServiceTermResult"
               requestId:
                 type: string
         404:

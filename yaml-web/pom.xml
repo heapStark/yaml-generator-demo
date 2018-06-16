@@ -56,11 +56,12 @@
             <plugin>
                 <groupId>heap-stark</groupId>
                 <artifactId>yaml-generator</artifactId>
-                <version>0.1-SNAPSHOT</version>
+                <version>0.3-SNAPSHOT</version>
                 <configuration>
                     <controllerPackage>service.test</controllerPackage>
                     <resultPath>/home/wzl/source/demo/yaml-web/src/main/resources
                     </resultPath>
+                    <moduleName>test</moduleName>
                 </configuration>
                 <dependencies>
                     <dependency>

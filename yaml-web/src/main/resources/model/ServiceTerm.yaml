@@ -1,7 +1,7 @@
 swagger: "2.0"
 definitions:
   serviceTerm:
-    x-jcloud-module: renewal
+    x-jcloud-module: test
     title: ServiceTerm
     type: object
     properties:
