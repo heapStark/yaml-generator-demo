@@ -31,7 +31,7 @@ paths:
           schema:
             properties:
               result:
-                $ref: "../model/serviceTermResult.yaml#/definitions/ServiceTermResult"
+                $ref: "../model/ServiceTermResult.yaml#/definitions/serviceTermResult"
               requestId:
                 type: string
         404:
@@ -45,7 +45,7 @@ paths:
           schema:
             properties:
               result:
-                $ref: "../model/serviceTermResult.yaml#/definitions/ServiceTermResult"
+                $ref: "../model/ServiceTermResult.yaml#/definitions/serviceTermResult"
               requestId:
                 type: string
         404:
@@ -73,7 +73,7 @@ paths:
           schema:
             properties:
               result:
-                $ref: "../model/serviceTermResult.yaml#/definitions/ServiceTermResult"
+                $ref: "../model/ServiceTermResult.yaml#/definitions/serviceTermResult"
               requestId:
                 type: string
         404:
