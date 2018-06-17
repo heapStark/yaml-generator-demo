@@ -37,7 +37,7 @@
         </dependency>
         <dependency>
             <groupId>heap-stark</groupId>
-            <artifactId>yaml-web2.bean</artifactId>
+            <artifactId>yaml-bean</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
@@ -52,17 +52,37 @@
                 </configuration>
             </plugin>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
+                <groupId>heap-stark</groupId>
+                <artifactId>yaml-generator</artifactId>
+                <version>0.4-SNAPSHOT</version>
                 <configuration>
-                    <archive>
-                        <manifest>
-                            <addClasspath>true</addClasspath>
-                            <classpathPrefix></classpathPrefix>
-                            <mainClass>com.xx.xx.xx</mainClass>
-                        </manifest>
-                    </archive>
+                    <controllerPackage>service.test</controllerPackage>
+                    <resultPath>E:\Java\yaml-generator-demo\yaml-web\src\main\resources
+                    </resultPath>
+                    <moduleName>test</moduleName>
                 </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>heap-stark</groupId>
+                        <artifactId>yaml-web</artifactId>
+                        <version>3.0-SNAPSHOT</version>
+                        <type>jar</type>
+                    </dependency>
+                    <dependency>
+                        <groupId>heap-stark</groupId>
+                        <artifactId>yaml-web2</artifactId>
+                        <version>1.0-SNAPSHOT</version>
+                    </dependency>
+                </dependencies>
+                <executions>
+                    <execution>
+                        <id>first</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>yaml</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

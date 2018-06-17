@@ -13,7 +13,7 @@
     <dependencies>
         <dependency>
             <groupId>heap-stark</groupId>
-            <artifactId>yaml-web2.bean</artifactId>
+            <artifactId>yaml-bean</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
