@@ -4,9 +4,9 @@ info:
   description: API related to test
 basePath: /renewal
 paths:
-  "/postQuery/{serviceCode}":
-    post:
-      operationId: postQuery
+  "/query/{serviceCode}:delete":
+    get:
+      operationId: querydelete
       parameters:
         - name: filters
           in: query
@@ -21,10 +21,6 @@ paths:
           in: query
           type: integer
           required: true
-        - name: serviceTerm
-          in: body
-          schema:
-            $ref: "../model/ServiceTerm.yaml#/definitions/serviceTerm"
       responses:
         200:
           description: OK
@@ -50,9 +46,9 @@ paths:
                 type: string
         404:
           description: NOT_FOUND
-  "/query/{serviceCode}:delete":
-    get:
-      operationId: querydelete
+  "/postQuery/{serviceCode}":
+    post:
+      operationId: postQuery
       parameters:
         - name: filters
           in: query
@@ -67,6 +63,10 @@ paths:
           in: query
           type: integer
           required: true
+        - name: serviceTerm
+          in: body
+          schema:
+            $ref: "../model/ServiceTerm.yaml#/definitions/serviceTerm"
       responses:
         200:
           description: OK

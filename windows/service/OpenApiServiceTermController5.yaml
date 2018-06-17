@@ -1,8 +1,8 @@
 swagger: "2.0"
 info:
   title: JCLOUD test API
-  description: API related to Renewal
-basePath: /renewal
+  description: API related to test
+basePath: /renewal3
 paths:
   "/query/{serviceCode}:delete":
     get:
