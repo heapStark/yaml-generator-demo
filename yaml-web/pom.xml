@@ -94,7 +94,7 @@
                         <version>1.0-SNAPSHOT</version>
                         <configuration>
                             <controllerPackage>service.test</controllerPackage>
-                            <resultPath>/home/wzl/source/demo/windows
+                            <resultPath>E:\Java\yaml-generator-demo\windows
                             </resultPath>
                             <moduleName>test</moduleName>
                         </configuration>
