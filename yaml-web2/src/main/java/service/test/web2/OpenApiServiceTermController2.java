@@ -1,9 +1,9 @@
-package service.test;
+package service.test.web2;
 
 
+import org.springframework.web.bind.annotation.*;
 import web2.bean.ServiceTerm;
 import web2.bean.ServiceTermResult;
-import org.springframework.web.bind.annotation.*;
 import web2.result.OpenApiResult;
 
 import java.util.Map;
@@ -14,7 +14,7 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping(value = "/renewal")
-public class OpenApiServiceTermController {
+public class OpenApiServiceTermController2 {
 
     @RequestMapping(path = "/queryServiceTerm/{serviceCode}", method = RequestMethod.GET)
     public OpenApiResult<ServiceTermResult> query(@PathVariable("serviceCode") String serviceCode) {
