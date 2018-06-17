@@ -13,22 +13,13 @@
         </filter>
     </appender>
 
-    <appender name="FILE" class="org.apache.log4j.DailyRollingFileAppender">
-        <param name="DatePattern" value="'.'yyyy-MM-dd"/>
-        <param name="file" value="~/export/Logs/nioTest.log"/>
-        <layout class="org.apache.log4j.PatternLayout">
-            <param name="ConversionPattern" value="%d{yyyy-MMM-dd HH:mm:ss.SSS} – [%7r] – [%6p] – [%t] - [%l] - %m%n"/>
-        </layout>
-    </appender>
-
     <category name="*" additivity="false">
         <priority value="ERROR"/>
-        <appender-ref ref="FILE"/>
+        <appender-ref ref="CONSOLE"/>
     </category>
 
     <root>
         <priority value="INFO"/>
         <appender-ref ref="CONSOLE"/>
-        <appender-ref ref="FILE"/>
     </root>
 </log4j:configuration>
