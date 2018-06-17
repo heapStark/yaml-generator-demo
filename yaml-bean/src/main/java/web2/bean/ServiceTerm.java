@@ -7,6 +7,7 @@ package web2.bean;
 public class ServiceTerm {
     private String value;
     private String description;
+    private TestBean testBean;
 
     @Override
     public String toString() {

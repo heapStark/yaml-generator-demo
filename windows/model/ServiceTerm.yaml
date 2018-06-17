@@ -1,0 +1,13 @@
+swagger: "2.0"
+definitions:
+  serviceTerm:
+    x-jcloud-module: test
+    title: ServiceTerm
+    type: object
+    properties:
+      value:
+        type: string
+      description:
+        type: string
+      testBean:
+        $ref: "../model/TestBean.yaml#/definitions/testBean"

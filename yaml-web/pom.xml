@@ -11,7 +11,7 @@
 
     <groupId>heap-stark</groupId>
     <artifactId>yaml-web</artifactId>
-    <version>3.0-SNAPSHOT</version>
+    <version>1.0-SNAPSHOT</version>
     <dependencies>
         <!--log-->
         <dependency>
@@ -41,51 +41,87 @@
             <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>heap-stark</groupId>
-                <artifactId>yaml-generator</artifactId>
-                <version>0.4-SNAPSHOT</version>
-                <configuration>
-                    <controllerPackage>service.test</controllerPackage>
-                    <resultPath>E:\Java\yaml-generator-demo\yaml-web\src\main\resources
-                    </resultPath>
-                    <moduleName>test</moduleName>
-                </configuration>
-                <dependencies>
-                    <dependency>
+    <profiles>
+        <profile>
+            <id>dev</id>
+        </profile>
+        <profile>
+            <id>api-linux</id>
+            <build>
+                <plugins>
+                    <plugin>
                         <groupId>heap-stark</groupId>
-                        <artifactId>yaml-web</artifactId>
-                        <version>3.0-SNAPSHOT</version>
-                        <type>jar</type>
-                    </dependency>
-                    <dependency>
-                        <groupId>heap-stark</groupId>
-                        <artifactId>yaml-web2</artifactId>
+                        <artifactId>yaml-generator</artifactId>
                         <version>1.0-SNAPSHOT</version>
-                    </dependency>
-                </dependencies>
-                <executions>
-                    <execution>
-                        <id>first</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>yaml</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
-
-    
+                        <configuration>
+                            <controllerPackage>service.test</controllerPackage>
+                            <resultPath>/home/wzl/source/demo/linux
+                            </resultPath>
+                            <moduleName>test</moduleName>
+                        </configuration>
+                        <dependencies>
+                            <dependency>
+                                <groupId>heap-stark</groupId>
+                                <artifactId>yaml-web</artifactId>
+                                <version>1.0-SNAPSHOT</version>
+                            </dependency>
+                            <dependency>
+                                <groupId>heap-stark</groupId>
+                                <artifactId>yaml-web2</artifactId>
+                                <version>1.0-SNAPSHOT</version>
+                            </dependency>
+                        </dependencies>
+                        <executions>
+                            <execution>
+                                <id>first</id>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>yaml</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>api-windows</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>heap-stark</groupId>
+                        <artifactId>yaml-generator</artifactId>
+                        <version>1.0-SNAPSHOT</version>
+                        <configuration>
+                            <controllerPackage>service.test</controllerPackage>
+                            <resultPath>/home/wzl/source/demo/windows
+                            </resultPath>
+                            <moduleName>test</moduleName>
+                        </configuration>
+                        <dependencies>
+                            <dependency>
+                                <groupId>heap-stark</groupId>
+                                <artifactId>yaml-web</artifactId>
+                                <version>1.0-SNAPSHOT</version>
+                            </dependency>
+                            <dependency>
+                                <groupId>heap-stark</groupId>
+                                <artifactId>yaml-web2</artifactId>
+                                <version>1.0-SNAPSHOT</version>
+                            </dependency>
+                        </dependencies>
+                        <executions>
+                            <execution>
+                                <id>first</id>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>yaml</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 </project>
