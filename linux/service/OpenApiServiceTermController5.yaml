@@ -25,6 +25,10 @@ paths:
           in: body
           schema:
             $ref: "../model/ServiceTerm.yaml#/definitions/serviceTerm"
+        - name: hello
+          in: query
+          type: string
+          required: false
       responses:
         200:
           description: OK
@@ -109,6 +113,10 @@ paths:
   "/queryServiceTerm/{serviceCode}":
     get:
       operationId: queryServiceTerm
+        - name: hello
+          in: query
+          type: string
+          required: false
       responses:
         200:
           description: OK
