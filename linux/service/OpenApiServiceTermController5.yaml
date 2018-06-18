@@ -37,7 +37,35 @@ paths:
         404:
           description: NOT_FOUND
   "/queryServiceTerm/{serviceCode}":
-    get:
+    patch:
+      operationId: queryServiceTerm
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                $ref: "../model/ServiceTermResult.yaml#/definitions/serviceTermResult"
+              requestId:
+                type: string
+        404:
+          description: NOT_FOUND
+  "/queryServiceTerm/{serviceCode}":
+    put:
+      operationId: queryServiceTerm
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                $ref: "../model/ServiceTermResult.yaml#/definitions/serviceTermResult"
+              requestId:
+                type: string
+        404:
+          description: NOT_FOUND
+  "/queryServiceTerm/{serviceCode}":
+    delete:
       operationId: queryServiceTerm
       responses:
         200:
@@ -74,6 +102,34 @@ paths:
             properties:
               result:
                 $ref: "../model/ServiceTermResult.yaml#/definitions/serviceTermResult"
+              requestId:
+                type: string
+        404:
+          description: NOT_FOUND
+  "/queryServiceTerm/{serviceCode}":
+    get:
+      operationId: queryServiceTerm
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                $ref: "../model/ServiceTermResult.yaml#/definitions/serviceTermResult"
+              requestId:
+                type: string
+        404:
+          description: NOT_FOUND
+  "/queryServiceTerm/{serviceCode}":
+    patch:
+      operationId: queryServiceTerm
+      responses:
+        200:
+          description: OK
+          schema:
+            properties:
+              result:
+                $ref: "../model/ServiceTerm.yaml#/definitions/serviceTerm"
               requestId:
                 type: string
         404:
