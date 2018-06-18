@@ -113,6 +113,7 @@ paths:
   "/queryServiceTerm/{serviceCode}":
     get:
       operationId: queryServiceTerm
+      parameters:
         - name: hello
           in: query
           type: string
